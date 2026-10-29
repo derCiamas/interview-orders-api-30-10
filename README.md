@@ -9,9 +9,6 @@ Review the pull request adding order submission in Angular and ASP.NET Core.
 The development proxy maps `/api/orders` to the backend `/orders` route.
 The database is shared by all backend instances.
 
-Spend approximately 3 minutes reading, 8 minutes discussing findings, and
-4 minutes outlining a solution and tests. No implementation is required.
-
 Please explain:
 
 1. How duplicates might occur, and what evidence you would collect.
