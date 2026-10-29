@@ -22,26 +22,3 @@ Please explain:
 
 Ask questions and state assumptions. Prioritize correctness over style.
 Do not merge the pull request.
-
-## Run locally (optional)
-
-Requirements: .NET 10 SDK, Node.js 20.19+ or 22.12+, npm.
-
-```sh
-cd frontend
-npm ci
-npm run build
-cd ../backend
-dotnet run --urls http://localhost:5080
-```
-
-Open `http://localhost:5080`. The backend serves the compiled frontend
-and maps the development `/api` route prefix. SQLite uses `orders.db`
-in the backend working directory. This is a small interview fixture, not
-a production checkout: authentication, payments, and inventory are out of scope.
-
-## Validation
-
-Run `npm run build` in `frontend` and `dotnet build` in `backend`.
-With the server running, `curl -f http://localhost:5080/health` should return
-`{"status":"ok"}`. Use a fresh database for independent manual experiments.
