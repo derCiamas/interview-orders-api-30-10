@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+**/.compiled/
+**/*.db
+**/*.db-shm
+**/*.db-wal
+.env
+.env.*
+!.env.example
