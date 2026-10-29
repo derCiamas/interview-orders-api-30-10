@@ -35,4 +35,24 @@ if (Directory.Exists(frontendPath))
 
 app.MapGet("/health", () => Results.Ok(new { status = "ok" }));
 
+app.MapPost("/orders", async (
+    CreateOrderRequest request,
+    AppDbContext db,
+    CancellationToken cancellationToken) =>
+{
+    var order = new Order
+    {
+        CustomerId = request.CustomerId,
+        CreatedAt = DateTime.UtcNow,
+        OrderItems = request.OrderItems
+    };
+
+    db.Orders.Add(order);
+    await db.SaveChangesAsync(cancellationToken);
+
+    return Results.Created(
+        $"/orders/{order.Id}",
+        new { order.Id });
+});
+
 app.Run();
