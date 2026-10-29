@@ -17,5 +17,4 @@ Please explain:
    including after an uncertain network outcome.
 4. The most important tests for your proposed solution.
 
-Ask questions and state assumptions. Prioritize correctness over style.
-Do not merge the pull request.
+Ask questions and state assumptions.
