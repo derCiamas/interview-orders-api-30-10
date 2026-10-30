@@ -1,7 +1,5 @@
 # Order submission review
 
-## Interview: 15 minutes
-
 Customers occasionally report duplicate orders. The team suspects repeated
 clicks, but has not confirmed the cause.
 
